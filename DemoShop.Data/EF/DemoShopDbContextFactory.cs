@@ -15,7 +15,7 @@ namespace eShopSolution.Data.EF
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettingss.json")
                 .Build();
 
             var connectionString = configuration.GetConnectionString("DemoShopDb");

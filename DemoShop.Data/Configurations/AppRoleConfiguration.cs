@@ -12,6 +12,7 @@ namespace eShopSolution.Data.Configurations
         public void Configure(EntityTypeBuilder<AppRole> builder)
         {
             builder.ToTable("AppRoles");
+            builder.HasKey(x => x.Description);
 
             builder.Property(x => x.Description).HasMaxLength(200).IsRequired();
 
