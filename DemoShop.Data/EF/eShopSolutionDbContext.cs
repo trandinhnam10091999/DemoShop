@@ -1,16 +1,17 @@
 ﻿using eShopSolution.Data.Configurations;
 using eShopSolution.Data.Entities;
 using eShopSolution.Data.Extensions;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DemoShop.Data.EF
+namespace eShopSolution.Data.EF
 {
-    public class DemoShopDbContext : DbContext
+    public class eShopSolutionDbContext : IdentityDbContext
     {
-        public DemoShopDbContext(DbContextOptions options) : base(options)
+        public eShopSolutionDbContext(DbContextOptions options) : base(options)
         {
 
         }
@@ -34,8 +35,7 @@ namespace DemoShop.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
 
-            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
-            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
+            
             modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
 
             //Data seeding
