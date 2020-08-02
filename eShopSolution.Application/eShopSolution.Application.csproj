@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>eShopSolution.Application</AssemblyName>
-    <RootNamespace>eShopSolution.Application</RootNamespace>
   </PropertyGroup>
 
 </Project>
